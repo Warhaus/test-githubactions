@@ -1,0 +1,19 @@
+.main .group-zodiac {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 900px;
+    align-items: center;
+    margin: 100px auto 50px auto;
+}
+
+.main .item-zodiac {
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.main .item-zodiac img {
+    width: 90px;
+    height: 90px;
+}
