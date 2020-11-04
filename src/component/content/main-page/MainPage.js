@@ -1,38 +1,30 @@
-import React, {useState} from 'react';
-import Select from "react-select";
-import {horoscopeSing, selectState} from "../../../constans";
+import React from 'react';
+import {useSelector, useDispatch} from "react-redux";
+import {NavLink} from "react-router-dom";
 
 function MainPage() {
-    const [stateSelect, setStateSelect] = useState({selectedOption: null});
-    console.log(stateSelect);
+    const dispatch = useDispatch();
+    const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
 
-    function handleChange (selectedOption) {
-        setStateSelect(selectedOption)
+    const takeId = (id) => {
+        dispatch({type: "TAKE_SING_ID", payload: id})
     }
 
     return (
         <div className="main">
-            <div className="wrap">
+            <div className="container">
                 <div className="group-zodiac">
-                    {horoscopeSing.map(item =>
-                        <div className="item-zodiac" key={item.id}>
-                            <div className="img"><img src={item.img} alt=""/></div>
-                            <div className="name">{item.name}</div>
-                            <div className="date">{item.date}</div>
+                    {horoscopeSingData.map(item =>
+                        <div className="item-zodiac" key={item.id} onClick={() => takeId(item.id)}>
+                            <NavLink to={item.link}>
+                                <div className="img"><img src={item.img} alt=""/></div>
+                                <div className="name">{item.name}</div>
+                                <div className="date">{item.date}</div>
+                            </NavLink>
                         </div>
                     )}
                 </div>
             </div>
-            <Select
-                placeholder="Who's your sign..?"
-                onChange={handleChange}
-                options={selectState}
-            />
-            <Select
-                placeholder="Who's your sign..?"
-                onChange={handleChange}
-                options={selectState}
-            />
         </div>
     );
 }

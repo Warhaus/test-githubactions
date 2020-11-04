@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
 import MainPage from "./component/content/main-page/MainPage";
+import SelectedSing from "./component/content/selectedSing/SelectedSing";
+import {Switch, Route} from "react-router-dom";
 
 function App() {
     return (
-        <div className="app">
-          <MainPage />
-        </div>
+        <Switch>
+            <Route exact path="/" component={MainPage}/>
+            <Route path="/sign/" component={SelectedSing}/>
+        </Switch>
     );
 }
 
