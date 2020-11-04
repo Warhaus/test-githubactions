@@ -27,3 +27,33 @@
     width: 90px;
     height: 90px;
 }
+
+.wrap-bg {
+    position: relative;
+}
+
+.wrap-bg .container {
+    margin: 0;
+    padding: 0 0 0 40px;
+}
+
+.wrap-bg .bg img {
+    width: 100%;
+}
+
+.wrap-bg .group-zodiac-selected .name {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.wrap-bg .group-zodiac-selected .name p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.wrap-bg .group-zodiac-selected .description {
+    font-size: 20px;
+}
