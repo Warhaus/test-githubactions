@@ -1,6 +1,7 @@
 import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
-import {tabGroup} from "../../../constans";
+import Select from 'react-select';
+import {selectState, tabGroup} from "../../../constans";
 
 function MainPage() {
     const dispatch = useDispatch();
@@ -39,7 +40,14 @@ function MainPage() {
             {horoscopeSingData.filter(item => item.id === horoscopeSingSelected).map(item =>
                 <div className="container" key={item.id}>
                     <div className="group-zodiac-selected">
-                        <div className="name"><p>{item.name} Horoscope</p></div>
+                        <div className="name">
+                            <p>{item.name} Horoscope</p>
+                            <Select
+                                //value={selectedOption}
+                                //onChange={this.handleChange}
+                                options={selectState}
+                            />
+                        </div>
                         <div className="description">
                             <p><strong>{months} {day}, {year}</strong> - {[...item.descriptionGroup][horoscopeDaySelected].description}</p>
                         </div>

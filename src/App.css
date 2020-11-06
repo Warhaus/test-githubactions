@@ -41,10 +41,17 @@
     width: 100%;
 }
 
+.css-2b097c-container {
+    width: 185px;
+    margin: 0 0 0 30px;
+}
+
 .wrap-bg .group-zodiac-selected .name {
     position: absolute;
     top: 40px;
     left: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .wrap-bg .group-zodiac-selected .name p {
