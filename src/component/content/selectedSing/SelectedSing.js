@@ -8,9 +8,6 @@ function MainPage() {
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
     const horoscopeDaySelected = useSelector(state => state.horoscopeSing.horoscopeDaySelected)
 
-    console.log(horoscopeSingSelected)
-    console.log(horoscopeSingData)
-    console.log(horoscopeDaySelected)
     const takeDay = (value) => {
         dispatch({type: "TAKE_DAY", payload: value})
     }
