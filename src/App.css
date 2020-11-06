@@ -57,3 +57,25 @@
 .wrap-bg .group-zodiac-selected .description {
     font-size: 20px;
 }
+
+.wrap-bg .tab-group .tab ul {
+    display: inline-flex;
+    list-style: none;
+    border-bottom: 1px solid;
+    margin: 15px 0 0 40px;
+    padding: 0;
+}
+
+.wrap-bg .tab-group .tab ul li {
+    padding: 0 15px 0 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.wrap-bg .tab-group .tab ul li:last-child {
+    padding: 0 0 0 0;
+}
+
+.wrap-bg .tab-group .tab ul li.active {
+    color: #b9314a;
+}

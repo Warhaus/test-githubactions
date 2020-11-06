@@ -21,7 +21,31 @@ const horoscopeSingData = [
         name: 'Aquarius',
         img: '/img/aquarius.png',
         date: 'Jan 20 - Feb 18',
-        description: 'You may have spent the past few weeks exploring new horizons, talking to new people, going out more frequently in the evening, when possible, or even making short trips away from home. But this is a moment to settle down. Today\'s celestial configuration is giving you the incentive you need to stabilize yourself. Expect some pleasurable moments in the comfort of your home, Aquarius.'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+            },
+            {
+                id: 3,
+                description: "mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week.Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '1',
@@ -29,7 +53,32 @@ const horoscopeSingData = [
         name: 'Pisces',
         img: '/img/pisces.png',
         date: 'Feb 19 - Mar 20',
-        description: 'You\'re likely to enjoy today\'s change of tone, Pisces. Don\'t you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '2',
@@ -37,7 +86,32 @@ const horoscopeSingData = [
         name: 'Aries',
         img: '/img/aries.png',
         date: 'Mar 21 - Apr 19',
-        description: "Today, Aries, you can expect to be somewhat more enterprising in your relationships. You may find new friends or enjoy spending quality time with some old ones, if possible. Perhaps you will look forward to an intensification of your love life. With today's planetary configuration, you will surely find excellent resources for improving your emotional well-being."
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '3',
@@ -45,7 +119,32 @@ const horoscopeSingData = [
         name: 'Taurus',
         img: '/img/taurus.png',
         date: 'Apr 20 - May 20',
-        description: 'Recent aspects have allowed you to affirm yourself at work and, in a more general way, cement some aspects of your personality. Now you will be consolidating things. It\'s as if you\'ve conceived of a product, created it, and are now finally ready to put it on the market. If this is in fact the case, Taurus, the current period corresponds to incoming money - and profits.'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '4',
@@ -53,7 +152,32 @@ const horoscopeSingData = [
         name: 'Gemini',
         img: '/img/gemini.png',
         date: 'May 21 - Jun 20',
-        description: 'Today\'s planetary aspects herald the beginning of an especially agreeable period. You will carry confidence, clarity, and positive influence wherever you go, Gemini. You\'ve used up a lot of your reserves recently and made it to this stage just in the nick of time. Enjoy your new strength.'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '5',
@@ -61,7 +185,32 @@ const horoscopeSingData = [
         name: 'Cancer',
         img: '/img/cancer.png',
         date: 'Jun 21 - Jul 22',
-        description: 'Today\'s planetary configurations indicate that this would be a good moment to get rid of everything that\'s still holding you back from an impending rebirth, Cancer. One stumbling block for you may be the impulse that you seem to have to blend in with others. You\'re an individual, Cancer. This isn\'t something to overcome. It should be celebrated!'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '6',
@@ -69,7 +218,32 @@ const horoscopeSingData = [
         name: 'Leo',
         img: '/img/leo.png',
         date: 'Jul 23 - Aug 22',
-        description: 'Today\'s planetary configurations indicate that you can expect a very profitable period coming up, Leo. You\'ve worked hard lately, and it\'s only natural that you should finally arrive at this stage. You\'re going to be able to measure the distance you\'ve come, and above all, evaluate your power. Whatever you do, think big!'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '7',
@@ -77,7 +251,32 @@ const horoscopeSingData = [
         name: 'Virgo',
         img: '/img/virgo.png',
         date: 'Aug 23 - Sep 22',
-        description: 'Today\'s aspects ask you to make more of an effort, Virgo. You will have to come back down to Earth and join the rest of us mere mortals. You may be cultivating your independence a bit too much. It pulls you away from people. You should try to mingle and get involved in a cause that\'s bigger than you. Working with others is a necessary part of any job.'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '8',
@@ -85,7 +284,32 @@ const horoscopeSingData = [
         name: 'Libra',
         img: '/img/libra.png',
         date: 'Sep 23 - Oct 22',
-        description: 'You can interpret today\'s aspects in several ways, Libra. The planetary configurations correspond to a search for space, whether physical or intellectual. You may be asking yourself philosophical questions, or perhaps you\'re thinking of taking a long trip in the future. What will you decide to do? Will you read Kant or plan your dream trip?'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '9',
@@ -93,7 +317,32 @@ const horoscopeSingData = [
         name: 'Scorpio',
         img: '/img/scorpio.png',
         date: 'Oct 23 - Nov 21',
-        description: 'In navigating the seas of your emotional life, Scorpio, you may feel as though you\'ve made a great effort over the past month. You\'ve been available and conciliatory and have done your best to maintain harmony. With today\'s celestial energy, you want to be more spontaneous. The enterprising and reckless you has returned!'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     },
     {
         id: '10',
@@ -101,7 +350,32 @@ const horoscopeSingData = [
         name: 'Sagittarius',
         img: '/img/sagittarius.png',
         date: 'Nov 22 - Dec 21',
-        description: 'With today\'s celestial configuration, your emotional universe will once again glow with positive energy. You will be meeting more people, and your encounters are likely to be more profound. The coming weeks are quite promising for you, Sagittarius. The music will be in the key to pleasure and sensuality. Allow the music to fill your senses!'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week. Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time. An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos. The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again."
+            }]
     },
     {
         id: '11',
@@ -109,13 +383,46 @@ const horoscopeSingData = [
         name: 'Capricorn',
         img: '/img/capricorn.png',
         date: 'Dec 22 - Jan 19',
-        description: 'For you, Capricorn, the changing planetary configuration portends a period of timidity. You will probably go out less, introduce yourself to fewer new people, and be less prone to show off. But any relationships you form will be much more intense than usual. The weeks ahead are quite promising, although you may have to readjust some of your attitudes.'
+        descriptionGroup: [
+            {
+                id: 0,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 1,
+                description: "You're likely to enjoy today's change of tone, Pisces. Don't you feel a need to take friendships beyond the superficial level? Perhaps you should reestablish contact with some former friends, too, although you may find that you have some bonds to repair. In any case, you can expect another month devoted to sweeping the cobwebs out of your emotional universe in order to let in sunlight and promise.",
+            },
+            {
+                id: 2,
+                description: "You may have your mind set on some big plans that you've been working on for some time now, Pisces. The problem is that today there is some conflict with something or someone with a large ego who suddenly wants a piece of the pie. Either that or this person wants to burst your bubble. Don't give up hope on your dreams. Realize that this opposition is just part of the adventure.",
+
+            },
+            {
+                id: 3,
+                description: "Mercury is finally turning direct on Tuesday, but it’s still not all smooth sailing for you yet. Mercury will be in flighty Libra until next week, making it difficult for you to stay on topic or make a decision. If you have any big decisions that could change your life completely, you might want to save them for next week Mercury will be in your intimacy sector for the rest of the week, encouraging you to take a step back and look at your mental process. How do you think about relationships? Why are taboos so taboo? These are the questions you should be asking yourself as you sink deeper into your mind. Then Mercury squares Saturn in Capricorn on Friday, causing some added stress and pressure in your life. Don’t try to suffer in silence. If you need help, Pisces, ask for it. Your friends have your back.",
+            },
+            {
+                id: 4,
+                description: "Your mind will be highly active in November despite the slower planetary pace, Pisces. A full moon at the end of October in your communication sector spills over into November, likely bringing to culmination an important writing, speaking, or contractual project (solar third house). Don’t rush it, though. Delay it until Mercury awakens on the November 3 and Mars turns direct ten days later. With the sun moving through your expansion sector throughout most of this month, you’ll be curious about moving in new directions (solar ninth house). While this would normally encourage you to travel overseas, you may instead be focused on going back to school or pursuing a publishing or media matter. When the new moon arrives on the fourteenth, a doorway could open for you to finally push forward what you seek. If you’re waiting for visa approval, you’ll likely get your answer at that time An important shift for the month ahead occurs when the sun moves into your achievements sector on November 21 (solar tenth house). Your mind will surely be on your professional life for the weeks to come, especially with the electrical energy rippling through the cosmos The crackling vibration you sense is the arrival of eclipse season once again. November ends with a lunar eclipse in yet another area—your domestic sector (solar fourth house). Many Pisces could move at this time or be focused on an important home renovation. However, if this triggers a memorable event in your family, be sure to attend to it because it could shift your life forever.",
+            },
+            {
+                id: 5,
+                description: "A mix of illusion and reality shapes your year. Your home planet Neptune supports your idealistic approach to life, and because it’s traveling in your escapist sign all year, this is the time to really dream big. Pay attention to intuition and visions – your subconscious is an accurate window into your soul and what you truly want this year. Neptune’s retrograde period occurs from late June until the end of November, however, which can cause all your daydreams to come crashing down. Having the soft, pillowy layers of plausible deniability you’ve built around you can be unnerving, and you won’t want to face the realities that slowly creep in. You’re tougher than you seem though, Pisces, so having to face the music can be a blessing in disguise. The sun will be floating through your imaginative sign from the end of February until the end of March, so happy birthday to you creative, romantic Pisces! You thrive living in your dream world, and you crave solitude to contemplate all of life’s “what ifs.” Because you’re the last sign of the Zodiac and because this transit occurs during the Spring Equinox, this is a time to embrace the ending of one cycle and the beginning of a new one. Take a breather, Pisces, and regain your strength before it’s time to start all over again.",
+            }]
     }
 ];
 
-
+const tabGroup = [
+    {id: 0, value: '0', name: 'yesterday'},
+    {id: 1, value: '1', name: 'today'},
+    {id: 2, value: '2', name: 'tomorrow'},
+    {id: 3, value: '3', name: 'weekly'},
+    {id: 4, value: '4', name: 'monthly'},
+    {id: 5, value: '5', name: '2020'}
+];
 export {
     selectState,
+    tabGroup,
     horoscopeSingData
 }
 
