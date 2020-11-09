@@ -20,6 +20,7 @@ const horoscopeSingData = [
         link: '/sign/aquarius/',
         name: 'Aquarius',
         img: '/img/aquarius.png',
+        classBlur: false,
         date: 'Jan 20 - Feb 18',
         descriptionGroup: [
             {
@@ -52,6 +53,7 @@ const horoscopeSingData = [
         link: '/sign/pisces/',
         name: 'Pisces',
         img: '/img/pisces.png',
+        classBlur: false,
         date: 'Feb 19 - Mar 20',
         descriptionGroup: [
             {
@@ -85,6 +87,7 @@ const horoscopeSingData = [
         link: '/sign/aries/',
         name: 'Aries',
         img: '/img/aries.png',
+        classBlur: false,
         date: 'Mar 21 - Apr 19',
         descriptionGroup: [
             {
@@ -118,6 +121,7 @@ const horoscopeSingData = [
         link: '/sign/taurus/',
         name: 'Taurus',
         img: '/img/taurus.png',
+        classBlur: false,
         date: 'Apr 20 - May 20',
         descriptionGroup: [
             {
@@ -151,6 +155,7 @@ const horoscopeSingData = [
         link: '/sign/gemini/',
         name: 'Gemini',
         img: '/img/gemini.png',
+        classBlur: false,
         date: 'May 21 - Jun 20',
         descriptionGroup: [
             {
@@ -184,6 +189,7 @@ const horoscopeSingData = [
         link: '/sign/cancer/',
         name: 'Cancer',
         img: '/img/cancer.png',
+        classBlur: true,
         date: 'Jun 21 - Jul 22',
         descriptionGroup: [
             {
@@ -217,6 +223,7 @@ const horoscopeSingData = [
         link: '/sign/leo/',
         name: 'Leo',
         img: '/img/leo.png',
+        classBlur: false,
         date: 'Jul 23 - Aug 22',
         descriptionGroup: [
             {
@@ -250,6 +257,7 @@ const horoscopeSingData = [
         link: '/sign/virgo/',
         name: 'Virgo',
         img: '/img/virgo.png',
+        classBlur: false,
         date: 'Aug 23 - Sep 22',
         descriptionGroup: [
             {
@@ -283,6 +291,7 @@ const horoscopeSingData = [
         link: '/sign/libra/',
         name: 'Libra',
         img: '/img/libra.png',
+        classBlur: false,
         date: 'Sep 23 - Oct 22',
         descriptionGroup: [
             {
@@ -316,6 +325,7 @@ const horoscopeSingData = [
         link: '/sign/scorpio/',
         name: 'Scorpio',
         img: '/img/scorpio.png',
+        classBlur: false,
         date: 'Oct 23 - Nov 21',
         descriptionGroup: [
             {
@@ -349,6 +359,7 @@ const horoscopeSingData = [
         link: '/sign/sagittarius/',
         name: 'Sagittarius',
         img: '/img/sagittarius.png',
+        classBlur: false,
         date: 'Nov 22 - Dec 21',
         descriptionGroup: [
             {
@@ -382,6 +393,7 @@ const horoscopeSingData = [
         link: '/sign/capricorn/',
         name: 'Capricorn',
         img: '/img/capricorn.png',
+        classBlur: false,
         date: 'Dec 22 - Jan 19',
         descriptionGroup: [
             {
@@ -420,9 +432,61 @@ const tabGroup = [
     {id: 4, value: '4', name: 'monthly'},
     {id: 5, value: '5', name: '2020'}
 ];
+
+const groupDayData = [
+    {id: 1, label: '1'},
+    {id: 2, label: '2'},
+    {id: 3, label: '3'},
+    {id: 4, label: '4'},
+    {id: 5, label: '5'},
+    {id: 6, label: '6'},
+    {id: 7, label: '7'},
+    {id: 8, label: '8'},
+    {id: 9, label: '9'},
+    {id: 10, label: '10'},
+    {id: 11, label: '11'},
+    {id: 12, label: '12'},
+    {id: 13, label: '13'},
+    {id: 14, label: '14'},
+    {id: 15, label: '15'},
+    {id: 16, label: '16'},
+    {id: 17, label: '17'},
+    {id: 18, label: '18'},
+    {id: 19, label: '19'},
+    {id: 20, label: '20'},
+    {id: 21, label: '21'},
+    {id: 22, label: '22'},
+    {id: 23, label: '23'},
+    {id: 24, label: '24'},
+    {id: 25, label: '25'},
+    {id: 26, label: '26'},
+    {id: 27, label: '27'},
+    {id: 28, label: '28'},
+    {id: 29, label: '29'},
+    {id: 30, label: '30'},
+    {id: 31, label: '31'}
+]
+
+const groupMonthData = [
+    {id: 0, label: 'January'},
+    {id: 1, label: 'February'},
+    {id: 2, label: 'March'},
+    {id: 3, label: 'April'},
+    {id: 4, label: 'May'},
+    {id: 5, label: 'June'},
+    {id: 6, label: 'July'},
+    {id: 7, label: 'August'},
+    {id: 8, label: 'September'},
+    {id: 9, label: 'October'},
+    {id: 10, label: 'November'},
+    {id: 11, label: 'December'},
+]
+
 export {
     selectState,
     tabGroup,
-    horoscopeSingData
+    horoscopeSingData,
+    groupDayData,
+    groupMonthData
 }
 

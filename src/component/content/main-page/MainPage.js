@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {NavLink} from "react-router-dom";
+import {groupDayData, groupMonthData} from "../../../constans";
+import Select from "react-select";
 
 function MainPage() {
     const dispatch = useDispatch();
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
 
+    const [stateZodiac, setStateZodiac] = useState({day: "", month: ""});
+
     const takeId = (id) => {
         dispatch({type: "TAKE_SING_ID", payload: id})
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        dispatch({type: "TAKE_DAY_MONTH", payload: stateZodiac})
     }
 
     return (
@@ -15,7 +24,9 @@ function MainPage() {
             <div className="container">
                 <div className="group-zodiac">
                     {horoscopeSingData.map(item =>
-                        <div className="item-zodiac" key={item.id} onClick={() => takeId(item.id)}>
+                        <div className={`${"item-zodiac"} ${item.classBlur === false ? "blur" : "strike"}`}
+                             key={item.id} onClick={() => takeId(item.id)}>
+                            {console.log(item)}
                             <NavLink to={item.link}>
                                 <div className="img"><img src={item.img} alt=""/></div>
                                 <div className="name">{item.name}</div>
@@ -23,6 +34,32 @@ function MainPage() {
                             </NavLink>
                         </div>
                     )}
+                </div>
+                <h1>Find out your zodiac sign:</h1>
+                <div className="group-select">
+                    <form onSubmit={handleSubmit}>
+                        <div className="group-select-wrap">
+                            <Select
+                                onChange={(stateZodiac) => {
+                                    setStateZodiac(prev => {
+                                        return {...prev, day: stateZodiac.label}
+                                    })
+                                }}
+                                placeholder="Day"
+                                options={groupDayData}
+                            />
+                            <Select
+                                onChange={(stateZodiac) => {
+                                    setStateZodiac(prev => {
+                                        return {...prev, month: stateZodiac.label}
+                                    })
+                                }}
+                                placeholder="Month"
+                                options={groupMonthData}
+                            />
+                            <button className="define">Define</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
