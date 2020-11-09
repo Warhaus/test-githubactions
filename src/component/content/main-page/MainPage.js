@@ -16,7 +16,7 @@ function MainPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch({type: "TAKE_DAY_MONTH", payload: stateZodiac})
+        dispatch({type: "FIND_ZODIAC_SIGN", payload: stateZodiac})
     }
 
     return (

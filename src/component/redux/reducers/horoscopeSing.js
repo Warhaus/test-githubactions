@@ -3,6 +3,7 @@ import {horoscopeSingData} from "../../../constans";
 const initialState = {
     horoscopeSingData,
     horoscopeSingSelected: [],
+    takeSingHoroscope: [],
     horoscopeDaySelected: 1
 }
 
@@ -22,6 +23,16 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 horoscopeDaySelected: action.payload
+            }
+        case "FIND_ZODIAC_SIGN":
+            console.log(action);
+            return {
+                ...state
+            }
+        case "TAKE_SING_HOROSCOPE":
+            return {
+                ...state,
+                takeSingHoroscope: action.payload
             }
         default:
             return state;

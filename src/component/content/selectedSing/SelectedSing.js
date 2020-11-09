@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import Select from 'react-select';
 import {selectState, tabGroup} from "../../../constans";
@@ -8,9 +8,14 @@ function MainPage() {
     const horoscopeSingSelected = useSelector(state => state.horoscopeSing.horoscopeSingSelected)
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
     const horoscopeDaySelected = useSelector(state => state.horoscopeSing.horoscopeDaySelected)
+    const horoscopeSingHoroscope = useSelector(state => state.horoscopeSing.takeSingHoroscope)
 
     const takeDay = (value) => {
         dispatch({type: "TAKE_DAY_TABS", payload: value})
+    }
+
+    const takeSingHoroscope = (singHoroscope) => {
+        dispatch({type: "TAKE_SING_HOROSCOPE", payload: singHoroscope.value})
     }
 
     const date = new Date();
@@ -18,6 +23,8 @@ function MainPage() {
     const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const months = monthsArr[date.getMonth()].substr(0, 3)
     const year = date.getFullYear();
+
+    console.log(horoscopeSingHoroscope.length === 0);
 
     return (
         <div className="wrap-bg">
@@ -37,14 +44,13 @@ function MainPage() {
                     </ul>
                 </div>
             </div>
-            {horoscopeSingData.filter(item => item.id === horoscopeSingSelected).map(item =>
+            {horoscopeSingData.filter(item => horoscopeSingHoroscope.length === 0 ? item.id === horoscopeSingSelected : item.id === horoscopeSingHoroscope).map(item =>
                 <div className="container" key={item.id}>
                     <div className="group-zodiac-selected">
                         <div className="name">
                             <p>{item.name} Horoscope</p>
                             <Select
-                                //value={selectedOption}
-                                //onChange={this.handleChange}
+                                onChange={takeSingHoroscope}
                                 options={selectState}
                             />
                         </div>

@@ -20,7 +20,7 @@ const horoscopeSingData = [
         link: '/sign/aquarius/',
         name: 'Aquarius',
         img: '/img/aquarius.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Jan 20 - Feb 18',
         descriptionGroup: [
             {
@@ -53,7 +53,7 @@ const horoscopeSingData = [
         link: '/sign/pisces/',
         name: 'Pisces',
         img: '/img/pisces.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Feb 19 - Mar 20',
         descriptionGroup: [
             {
@@ -87,7 +87,7 @@ const horoscopeSingData = [
         link: '/sign/aries/',
         name: 'Aries',
         img: '/img/aries.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Mar 21 - Apr 19',
         descriptionGroup: [
             {
@@ -121,7 +121,7 @@ const horoscopeSingData = [
         link: '/sign/taurus/',
         name: 'Taurus',
         img: '/img/taurus.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Apr 20 - May 20',
         descriptionGroup: [
             {
@@ -155,7 +155,7 @@ const horoscopeSingData = [
         link: '/sign/gemini/',
         name: 'Gemini',
         img: '/img/gemini.png',
-        classBlur: false,
+        classBlur: true,
         date: 'May 21 - Jun 20',
         descriptionGroup: [
             {
@@ -223,7 +223,7 @@ const horoscopeSingData = [
         link: '/sign/leo/',
         name: 'Leo',
         img: '/img/leo.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Jul 23 - Aug 22',
         descriptionGroup: [
             {
@@ -257,7 +257,7 @@ const horoscopeSingData = [
         link: '/sign/virgo/',
         name: 'Virgo',
         img: '/img/virgo.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Aug 23 - Sep 22',
         descriptionGroup: [
             {
@@ -291,7 +291,7 @@ const horoscopeSingData = [
         link: '/sign/libra/',
         name: 'Libra',
         img: '/img/libra.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Sep 23 - Oct 22',
         descriptionGroup: [
             {
@@ -325,7 +325,7 @@ const horoscopeSingData = [
         link: '/sign/scorpio/',
         name: 'Scorpio',
         img: '/img/scorpio.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Oct 23 - Nov 21',
         descriptionGroup: [
             {
@@ -359,7 +359,7 @@ const horoscopeSingData = [
         link: '/sign/sagittarius/',
         name: 'Sagittarius',
         img: '/img/sagittarius.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Nov 22 - Dec 21',
         descriptionGroup: [
             {
@@ -393,7 +393,7 @@ const horoscopeSingData = [
         link: '/sign/capricorn/',
         name: 'Capricorn',
         img: '/img/capricorn.png',
-        classBlur: false,
+        classBlur: true,
         date: 'Dec 22 - Jan 19',
         descriptionGroup: [
             {
