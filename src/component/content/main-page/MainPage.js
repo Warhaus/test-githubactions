@@ -26,7 +26,6 @@ function MainPage() {
                     {horoscopeSingData.map(item =>
                         <div className={`${"item-zodiac"} ${item.classBlur === false ? "blur" : "strike"}`}
                              key={item.id} onClick={() => takeId(item.id)}>
-                            {console.log(item)}
                             <NavLink to={item.link}>
                                 <div className="img"><img src={item.img} alt=""/></div>
                                 <div className="name">{item.name}</div>

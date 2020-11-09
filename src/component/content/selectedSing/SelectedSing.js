@@ -10,7 +10,7 @@ function MainPage() {
     const horoscopeDaySelected = useSelector(state => state.horoscopeSing.horoscopeDaySelected)
 
     const takeDay = (value) => {
-        dispatch({type: "TAKE_DAY", payload: value})
+        dispatch({type: "TAKE_DAY_TABS", payload: value})
     }
 
     const date = new Date();

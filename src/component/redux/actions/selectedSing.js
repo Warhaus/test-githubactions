@@ -4,6 +4,6 @@ export const takeSingId = id => ({
 });
 
 export const takeDay = (name) => ({
-    type: 'TAKE_DAY',
+    type: 'TAKE_DAY_TABS',
     payload: name
 });

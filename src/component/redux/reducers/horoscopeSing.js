@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
                 ...state,
                 horoscopeSingSelected: action.payload
             }
-        case "TAKE_DAY":
+        case "TAKE_DAY_TABS":
             return {
                 ...state,
                 horoscopeDaySelected: action.payload

@@ -49,6 +49,7 @@ h1 {
     outline: none;
     transition: .5s;
 }
+
 .main .group-select .group-select-wrap .define:hover {
     background: #96de81;
     transition: .5s;
@@ -84,6 +85,7 @@ h1 {
 
 .main .group-zodiac .item-zodiac.blur {
     filter: blur(4px);
+    pointer-events: none;
 }
 
 .main .group-zodiac .item-zodiac.strike {
