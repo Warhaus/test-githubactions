@@ -25,11 +25,18 @@ export default (state = initialState, action) => {
                 horoscopeDaySelected: action.payload
             }
         case "FIND_ZODIAC_SIGN":
-            console.log(action);
+            console.log("day - ", action.payload.day);
+            console.log("month - ", action.payload.month);
+            console.log(horoscopeSingData);
             return {
                 ...state
             }
         case "TAKE_SING_HOROSCOPE":
+            return {
+                ...state,
+                takeSingHoroscope: action.payload
+            }
+        case "CLEAR_LOCAL_STORAGE":
             return {
                 ...state,
                 takeSingHoroscope: action.payload

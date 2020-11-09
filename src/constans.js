@@ -468,18 +468,18 @@ const groupDayData = [
 ]
 
 const groupMonthData = [
-    {id: 0, label: 'January'},
-    {id: 1, label: 'February'},
-    {id: 2, label: 'March'},
-    {id: 3, label: 'April'},
-    {id: 4, label: 'May'},
-    {id: 5, label: 'June'},
-    {id: 6, label: 'July'},
-    {id: 7, label: 'August'},
-    {id: 8, label: 'September'},
-    {id: 9, label: 'October'},
-    {id: 10, label: 'November'},
-    {id: 11, label: 'December'},
+    {id: 0, label: 'January', value: '1'},
+    {id: 1, label: 'February', value: '2'},
+    {id: 2, label: 'March', value: '3'},
+    {id: 3, label: 'April', value: '4'},
+    {id: 4, label: 'May', value: '5'},
+    {id: 5, label: 'June', value: '6'},
+    {id: 6, label: 'July', value: '7'},
+    {id: 7, label: 'August', value: '8'},
+    {id: 8, label: 'September', value: '9'},
+    {id: 9, label: 'October', value: '10'},
+    {id: 10, label: 'November', value: '11'},
+    {id: 11, label: 'December', value: '12'},
 ]
 
 export {

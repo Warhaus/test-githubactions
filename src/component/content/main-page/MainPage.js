@@ -8,7 +8,7 @@ function MainPage() {
     const dispatch = useDispatch();
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
 
-    const [stateZodiac, setStateZodiac] = useState({day: "", month: ""});
+    const [stateZodiac, setStateZodiac] = useState({day: "", value: ""});
 
     const takeId = (id) => {
         dispatch({type: "TAKE_SING_ID", payload: id})
@@ -50,7 +50,7 @@ function MainPage() {
                             <Select
                                 onChange={(stateZodiac) => {
                                     setStateZodiac(prev => {
-                                        return {...prev, month: stateZodiac.label}
+                                        return {...prev, month: stateZodiac.value}
                                     })
                                 }}
                                 placeholder="Month"

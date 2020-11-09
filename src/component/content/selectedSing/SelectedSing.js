@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import Select from 'react-select';
 import {selectState, tabGroup} from "../../../constans";
+import {NavLink} from "react-router-dom";
 
 function MainPage() {
     const dispatch = useDispatch();
@@ -18,17 +19,24 @@ function MainPage() {
         dispatch({type: "TAKE_SING_HOROSCOPE", payload: singHoroscope.value})
     }
 
+    const clearLocalStorage = () => {
+        localStorage.clear();
+        dispatch({type: "CLEAR_LOCAL_STORAGE", payload: []})
+    }
+
     const date = new Date();
     const day = date.getDate()
     const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const months = monthsArr[date.getMonth()].substr(0, 3)
     const year = date.getFullYear();
 
-    console.log(horoscopeSingHoroscope.length === 0);
-
+    console.log(horoscopeSingSelected);
+    console.log(horoscopeSingHoroscope);
     return (
         <div className="wrap-bg">
-            <div className="bg"><img src="/img/daily-banner-bg.png" alt=""/></div>
+            <div className="bg"><img src="/img/daily-banner-bg.png" alt=""/>
+                <div className="back" onClick={clearLocalStorage}><NavLink to="/">Back to home</NavLink></div>
+            </div>
             <div className="tab-group">
                 <div className="tab">
                     <ul>
