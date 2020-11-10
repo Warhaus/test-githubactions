@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {NavLink} from "react-router-dom";
-import {groupDayData, groupMonthData} from "../../../constans";
+import {groupDayData, groupMonthData, horoscopeSingData} from "../../../constans";
 import Select from "react-select";
 
 function MainPage() {
     const dispatch = useDispatch();
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
+    const selectToDayMonth = useSelector(state => state.horoscopeSing.selectToDayMonth)
+
+    console.log("horoscopeSingData", horoscopeSingData);
+    console.log("test", selectToDayMonth);
 
     const [stateZodiac, setStateZodiac] = useState({day: "", value: ""});
 

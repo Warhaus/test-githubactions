@@ -22,6 +22,10 @@ const horoscopeSingData = [
         img: '/img/aquarius.png',
         classBlur: true,
         date: 'Jan 20 - Feb 18',
+        fromDay: '20',
+        fromMonth: '1',
+        untilDay: '18',
+        untilMonth: '2',
         descriptionGroup: [
             {
                 id: 0,
@@ -55,6 +59,10 @@ const horoscopeSingData = [
         img: '/img/pisces.png',
         classBlur: true,
         date: 'Feb 19 - Mar 20',
+        fromDay: '19',
+        fromMonth: '2',
+        untilDay: '20',
+        untilMonth: '3',
         descriptionGroup: [
             {
                 id: 0,
@@ -89,6 +97,10 @@ const horoscopeSingData = [
         img: '/img/aries.png',
         classBlur: true,
         date: 'Mar 21 - Apr 19',
+        fromDay: '21',
+        fromMonth: '3',
+        untilDay: '19',
+        untilMonth: '4',
         descriptionGroup: [
             {
                 id: 0,
@@ -123,6 +135,10 @@ const horoscopeSingData = [
         img: '/img/taurus.png',
         classBlur: true,
         date: 'Apr 20 - May 20',
+        fromDay: '20',
+        fromMonth: '4',
+        untilDay: '20',
+        untilMonth: '5',
         descriptionGroup: [
             {
                 id: 0,
@@ -157,6 +173,10 @@ const horoscopeSingData = [
         img: '/img/gemini.png',
         classBlur: true,
         date: 'May 21 - Jun 20',
+        fromDay: '5',
+        fromMonth: '21',
+        untilDay: '6',
+        untilMonth: '20',
         descriptionGroup: [
             {
                 id: 0,
@@ -191,6 +211,10 @@ const horoscopeSingData = [
         img: '/img/cancer.png',
         classBlur: true,
         date: 'Jun 21 - Jul 22',
+        fromDay: '6',
+        fromMonth: '21',
+        untilDay: '22',
+        untilMonth: '7',
         descriptionGroup: [
             {
                 id: 0,
@@ -225,6 +249,10 @@ const horoscopeSingData = [
         img: '/img/leo.png',
         classBlur: true,
         date: 'Jul 23 - Aug 22',
+        fromDay: '23',
+        fromMonth: '7',
+        untilDay: '22',
+        untilMonth: '8',
         descriptionGroup: [
             {
                 id: 0,
@@ -259,6 +287,10 @@ const horoscopeSingData = [
         img: '/img/virgo.png',
         classBlur: true,
         date: 'Aug 23 - Sep 22',
+        fromDay: '23',
+        fromMonth: '8',
+        untilDay: '22',
+        untilMonth: '9',
         descriptionGroup: [
             {
                 id: 0,
@@ -293,6 +325,10 @@ const horoscopeSingData = [
         img: '/img/libra.png',
         classBlur: true,
         date: 'Sep 23 - Oct 22',
+        fromDay: '23',
+        fromMonth: '9',
+        untilDay: '22',
+        untilMonth: '10',
         descriptionGroup: [
             {
                 id: 0,
@@ -327,6 +363,10 @@ const horoscopeSingData = [
         img: '/img/scorpio.png',
         classBlur: true,
         date: 'Oct 23 - Nov 21',
+        fromDay: '23',
+        fromMonth: '10',
+        untilDay: '21',
+        untilMonth: '11',
         descriptionGroup: [
             {
                 id: 0,
@@ -361,6 +401,10 @@ const horoscopeSingData = [
         img: '/img/sagittarius.png',
         classBlur: true,
         date: 'Nov 22 - Dec 21',
+        fromDay: '22',
+        fromMonth: '11',
+        untilDay: '21',
+        untilMonth: '12',
         descriptionGroup: [
             {
                 id: 0,
@@ -395,6 +439,10 @@ const horoscopeSingData = [
         img: '/img/capricorn.png',
         classBlur: true,
         date: 'Dec 22 - Jan 19',
+        fromDay: '22',
+        fromMonth: '12',
+        untilDay: '19',
+        untilMonth: '1',
         descriptionGroup: [
             {
                 id: 0,

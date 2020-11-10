@@ -4,7 +4,8 @@ const initialState = {
     horoscopeSingData,
     horoscopeSingSelected: [],
     takeSingHoroscope: [],
-    horoscopeDaySelected: 1
+    horoscopeDaySelected: 1,
+    selectToDayMonth: ""
 }
 
 export default (state = initialState, action) => {
@@ -25,11 +26,20 @@ export default (state = initialState, action) => {
                 horoscopeDaySelected: action.payload
             }
         case "FIND_ZODIAC_SIGN":
-            console.log("day - ", action.payload.day);
-            console.log("month - ", action.payload.month);
-            console.log(horoscopeSingData);
+            let payloadDate = parseInt(`${action.payload.month}${action.payload.day}`);
+            payloadDate = isNaN(payloadDate) ? 0 : payloadDate;
             return {
-                ...state
+                ...state,
+                selectToDayMonth: horoscopeSingData.filter(item =>
+                    payloadDate >= parseInt(`${item.fromMonth}${item.fromDay}`) &&
+                    payloadDate <= parseInt(`${item.untilMonth}${item.untilDay}`)
+                ),
+                horoscopeSingData: horoscopeSingData.map(item => {
+                    return {
+                        ...item,
+                        classBlur: false
+                    }
+                })
             }
         case "TAKE_SING_HOROSCOPE":
             return {

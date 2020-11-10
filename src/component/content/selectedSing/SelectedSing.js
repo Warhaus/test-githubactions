@@ -30,8 +30,6 @@ function MainPage() {
     const months = monthsArr[date.getMonth()].substr(0, 3)
     const year = date.getFullYear();
 
-    console.log(horoscopeSingSelected);
-    console.log(horoscopeSingHoroscope);
     return (
         <div className="wrap-bg">
             <div className="bg"><img src="/img/daily-banner-bg.png" alt=""/>
