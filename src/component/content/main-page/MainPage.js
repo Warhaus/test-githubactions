@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {NavLink} from "react-router-dom";
-import {groupDayData, groupMonthData, horoscopeSingData} from "../../../constans";
+import {groupDayData, groupMonthData} from "../../../constans";
 import Select from "react-select";
 
 function MainPage() {
@@ -9,10 +9,15 @@ function MainPage() {
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
     const selectToDayMonth = useSelector(state => state.horoscopeSing.selectToDayMonth)
 
-    console.log("horoscopeSingData", horoscopeSingData);
-    console.log("test", selectToDayMonth);
+    const [stateZodiac, setStateZodiac] = useState({});
 
-    const [stateZodiac, setStateZodiac] = useState({day: "", value: ""});
+    if (selectToDayMonth[0] !== undefined) {
+        horoscopeSingData.map(item => {
+            if (item.id === selectToDayMonth[0].id) {
+                item.classBlur = true;
+            }
+        })
+    }
 
     const takeId = (id) => {
         dispatch({type: "TAKE_SING_ID", payload: id})
