@@ -9,7 +9,7 @@ function MainPage() {
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
     const selectToDayMonth = useSelector(state => state.horoscopeSing.selectToDayMonth)
 
-    const [stateZodiac, setStateZodiac] = useState({});
+    const [stateZodiac, setStateZodiac] = useState({day: "", month: ""});
 
     if (selectToDayMonth[0] !== undefined) {
         horoscopeSingData.map(item => {
@@ -26,6 +26,11 @@ function MainPage() {
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch({type: "FIND_ZODIAC_SIGN", payload: stateZodiac})
+    }
+
+    const resetLocalStorage = () => {
+        dispatch({type: "RESET_LOCAL_STORAGE"})
+        setStateZodiac({day: "", month: ""})
     }
 
     return (
@@ -65,9 +70,10 @@ function MainPage() {
                                 placeholder="Month"
                                 options={groupMonthData}
                             />
-                            <button className="define">Define</button>
+                            <button className={`${"define"} ${stateZodiac.day.length >= 1 && stateZodiac.month.length >= 1 ? "" : "disabled"}`}>Define</button>
                         </div>
                     </form>
+                    <button className="resetStore" onClick={resetLocalStorage}>Reset Store</button>
                 </div>
             </div>
         </div>

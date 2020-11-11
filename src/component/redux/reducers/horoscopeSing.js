@@ -5,7 +5,8 @@ const initialState = {
     horoscopeSingSelected: [],
     takeSingHoroscope: [],
     horoscopeDaySelected: 1,
-    selectToDayMonth: ""
+    selectToDayMonth: "",
+    stateValidDefine: true
 }
 
 export default (state = initialState, action) => {
@@ -26,32 +27,31 @@ export default (state = initialState, action) => {
                 horoscopeDaySelected: action.payload
             }
         case "FIND_ZODIAC_SIGN":
-            let payloadDate = parseInt(`${action.payload.month}${action.payload.day}`);
-            payloadDate = isNaN(payloadDate) ? 0 : payloadDate;
-            //console.log(`${action.payload.month}${action.payload.day}`)
+            let month = parseInt(action.payload.month);
+            let day = parseInt(action.payload.day);
+            month = isNaN(month) ? 0 : month;
+            day = isNaN(day) ? 0 : day;
             return {
                 ...state,
                 horoscopeSingData: horoscopeSingData.map(item => {
                     return {...item, classBlur: false}
                 }),
-                selectToDayMonth: horoscopeSingData.filter(item =>
-                    payloadDate >= parseInt(`${(item.fromMonth)}${(item.fromDay)}`) &&
-                    payloadDate <= parseInt(`${(item.untilMonth)}${(item.untilDay)}`)
-                    //payloadDate <= parseInt(console.log("один - ", `${(item.fromMonth)}${(item.fromDay)}`)) &&
-                    //payloadDate >= parseInt(console.log("два - ", `${(item.untilMonth)}${(item.untilDay)}`))
+                selectToDayMonth: horoscopeSingData.filter(item => {
+                    let cmpMonth = month === 1 && parseInt(item.untilMonth) === 13 ? 13 : month;
+                    return (
+                        ((cmpMonth === parseInt(item.untilMonth) && day <= parseInt(item.untilDay)) || cmpMonth < parseInt(item.untilMonth)) &&
+                        ((cmpMonth === parseInt(item.fromMonth) && day >= parseInt(item.fromDay)) || cmpMonth > parseInt(item.fromMonth))
+                    )
+                }),
 
-                    // action.payload.day <= item.untilDay &&
-                    // action.payload.month <= item.untilMonth &&
-                    // action.payload.month >= item.fromMonth &&
-                    // ((action.payload.day >= item.fromDay && action.payload.month === item.fromMonth) || true)
-                )
-
-                // catalog.map(item => {
-                //     if (item.id === id) {
-                //         item.idBasket = false;
-                //     }
-                //     return item;
-                // })
+            }
+        case "RESET_LOCAL_STORAGE":
+            return {
+                ...state,
+                horoscopeSingData: horoscopeSingData.map(item => {
+                    return {...item, classBlur: true}
+                }),
+                selectToDayMonth: ""
             }
         case "TAKE_SING_HOROSCOPE":
             return {

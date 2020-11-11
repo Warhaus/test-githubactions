@@ -442,7 +442,7 @@ const horoscopeSingData = [
         fromDay: '22',
         fromMonth: '12',
         untilDay: '19',
-        untilMonth: '1',
+        untilMonth: '13',
         descriptionGroup: [
             {
                 id: 0,

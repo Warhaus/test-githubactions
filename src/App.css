@@ -39,9 +39,14 @@ h1 {
     align-items: center;
 }
 
+.main .group-select .group-select-wrap .define.disabled {
+    pointer-events: none;
+    background: #daefd4;
+}
+
 .main .group-select .group-select-wrap .define {
     border: none;
-    background: #daefd4;
+    background: #a0ca95;
     padding: 11px 20px 11px 20px;
     margin: 0 0 0 15px;
     border-radius: 5px;
@@ -52,6 +57,28 @@ h1 {
 
 .main .group-select .group-select-wrap .define:hover {
     background: #96de81;
+    transition: .5s;
+}
+
+.group-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .group-select .resetStore {
+    border: none;
+    background: #e9bbb6;
+    padding: 11px 20px 11px 20px;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
+}
+
+.main .group-select .resetStore:hover {
+    background: #f55555;
     transition: .5s;
 }
 

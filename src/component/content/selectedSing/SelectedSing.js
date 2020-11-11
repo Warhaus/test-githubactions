@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import Select from 'react-select';
 import {selectState, tabGroup} from "../../../constans";
@@ -58,6 +58,7 @@ function MainPage() {
                             <Select
                                 onChange={takeSingHoroscope}
                                 options={selectState}
+                                placeholder="Sing"
                             />
                         </div>
                         <div className="description">
