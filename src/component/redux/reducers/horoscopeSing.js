@@ -6,7 +6,9 @@ const initialState = {
     takeSingHoroscope: [],
     horoscopeDaySelected: 1,
     selectToDayMonth: "",
-    stateValidDefine: true
+    stateValidDefine: true,
+    stateWhatDay: [],
+    stateWhatDayLast: [],
 }
 
 export default (state = initialState, action) => {
@@ -62,6 +64,58 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 takeSingHoroscope: action.payload
+            }
+        case "TAKE_ID_DAY":
+            const date = new Date();
+            const weekDateFirst = (date.getDate() + 1) - date.getDay();
+            const weekDateFirstLast = weekDateFirst + 6;
+            const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const months = monthsArr[date.getMonth()].substr(0, 3)
+            const monthss = monthsArr[date.getMonth()]
+            if (action.payload === 0) {
+                const days = date.getDate() - 1;
+                const year = date.getFullYear();
+                return {
+                    ...state,
+                    stateWhatDay: {day: days, month: months, year: year}
+                }
+            }
+            if (action.payload === 1) {
+                const days = date.getDate();
+                const year = date.getFullYear();
+                return {
+                    ...state,
+                    stateWhatDay: {day: days, month: months, year: year}
+                }
+            }
+            if (action.payload === 2) {
+                const days = date.getDate() + 1;
+                const year = date.getFullYear();
+                return {
+                    ...state,
+                    stateWhatDay: {day: days, month: months, year: year}
+                }
+            }
+            if (action.payload === 3) {
+                const year = date.getFullYear();
+                return {
+                    ...state,
+                    stateWhatDay: {day: weekDateFirst, month: months, year: year},
+                    stateWhatDayLast: {day: weekDateFirstLast, month: months, year: year}
+                }
+            }
+            if (action.payload === 4) {
+                return {
+                    ...state,
+                    stateWhatDay: {day: "", month: monthss, year: ""}
+                }
+            }
+            if (action.payload === 5) {
+                const year = date.getFullYear();
+                return {
+                    ...state,
+                    stateWhatDay: {day: "", month: "", year: year}
+                }
             }
         default:
             return state;

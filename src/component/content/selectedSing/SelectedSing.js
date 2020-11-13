@@ -10,6 +10,8 @@ function MainPage() {
     const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
     const horoscopeDaySelected = useSelector(state => state.horoscopeSing.horoscopeDaySelected)
     const horoscopeSingHoroscope = useSelector(state => state.horoscopeSing.takeSingHoroscope)
+    const stateWhatDay = useSelector(state => state.horoscopeSing.stateWhatDay)
+    const stateWhatDayLast = useSelector(state => state.horoscopeSing.stateWhatDayLast)
 
     const takeDay = (value) => {
         dispatch({type: "TAKE_DAY_TABS", payload: value})
@@ -24,11 +26,10 @@ function MainPage() {
         dispatch({type: "CLEAR_LOCAL_STORAGE", payload: []})
     }
 
-    const date = new Date();
-    const day = date.getDate()
-    const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const months = monthsArr[date.getMonth()].substr(0, 3)
-    const year = date.getFullYear();
+    const addDateInfo = (id) => {
+        dispatch({type: "TAKE_ID_DAY", payload: id})
+    }
+
 
     return (
         <div className="wrap-bg">
@@ -42,7 +43,10 @@ function MainPage() {
                             <li
                                 key={item.id}
                                 className={parseInt(horoscopeDaySelected) === item.id ? "active" : ""}
-                                onClick={() => takeDay(item.value)}
+                                onClick={() => {
+                                    takeDay(item.value);
+                                    addDateInfo(item.id)
+                                }}
                             >
                                 {item.name}
                             </li>
@@ -62,7 +66,12 @@ function MainPage() {
                             />
                         </div>
                         <div className="description">
-                            <p><strong>{months} {day}, {year}</strong> - {[...item.descriptionGroup][horoscopeDaySelected].description}</p>
+                            <p>
+                                <strong>
+                                    {stateWhatDay.month} {stateWhatDay.day}{parseInt(horoscopeDaySelected) === 4 || 5 ? "" : ","} {stateWhatDay.year}
+                                    {parseInt(horoscopeDaySelected) === 3 ? `${" - " + stateWhatDay.month + " " + stateWhatDayLast.day + ", " + stateWhatDay.year}` : ""}
+                                </strong> - {[...item.descriptionGroup][horoscopeDaySelected].description}
+                            </p>
                         </div>
                     </div>
                 </div>
