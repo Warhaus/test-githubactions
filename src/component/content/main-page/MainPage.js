@@ -6,8 +6,8 @@ import Select from "react-select";
 
 function MainPage() {
     const dispatch = useDispatch();
-    const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData)
-    const selectToDayMonth = useSelector(state => state.horoscopeSing.selectToDayMonth)
+    const horoscopeSingData = useSelector(state => state.horoscopeSing.horoscopeSingData);
+    const selectToDayMonth = useSelector(state => state.horoscopeSing.selectToDayMonth);
 
     const [stateZodiac, setStateZodiac] = useState({day: "", month: ""});
 
