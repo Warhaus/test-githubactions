@@ -70,7 +70,9 @@ function MainPage() {
                                 placeholder="Month"
                                 options={groupMonthData}
                             />
-                            <button className={`${"define"} ${stateZodiac.day.length >= 1 && stateZodiac.month.length >= 1 ? "" : "disabled"}`}>Define</button>
+                            <button
+                                className={`${"define"} ${stateZodiac.day.length >= 1 && stateZodiac.month.length >= 1 ? "" : "disabled"}`}>Define
+                            </button>
                         </div>
                     </form>
                     <button className="resetStore" onClick={resetLocalStorage}>Reset Store</button>

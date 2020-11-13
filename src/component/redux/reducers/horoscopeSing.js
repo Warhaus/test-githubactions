@@ -72,6 +72,7 @@ export default (state = initialState, action) => {
             const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             const months = monthsArr[date.getMonth()].substr(0, 3)
             const monthss = monthsArr[date.getMonth()]
+
             if (action.payload === 0) {
                 const days = date.getDate() - 1;
                 const year = date.getFullYear();
@@ -117,6 +118,7 @@ export default (state = initialState, action) => {
                     stateWhatDay: {day: "", month: "", year: year}
                 }
             }
+            break;
         default:
             return state;
     }

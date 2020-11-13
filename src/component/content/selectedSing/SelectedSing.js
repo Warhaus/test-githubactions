@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import Select from 'react-select';
 import {selectState, tabGroup} from "../../../constans";
@@ -30,6 +30,11 @@ function MainPage() {
         dispatch({type: "TAKE_ID_DAY", payload: id})
     }
 
+    const date = new Date();
+    const day = date.getDate();
+    const year = date.getFullYear();
+    const monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = monthsArr[date.getMonth()].substr(0, 3)
 
     return (
         <div className="wrap-bg">
@@ -62,15 +67,21 @@ function MainPage() {
                             <Select
                                 onChange={takeSingHoroscope}
                                 options={selectState}
-                                placeholder="Sing"
+                                placeholder="Select sing"
                             />
                         </div>
                         <div className="description">
                             <p>
-                                <strong>
-                                    {stateWhatDay.month} {stateWhatDay.day}{parseInt(horoscopeDaySelected) === 4 || 5 ? "" : ","} {stateWhatDay.year}
-                                    {parseInt(horoscopeDaySelected) === 3 ? `${" - " + stateWhatDay.month + " " + stateWhatDayLast.day + ", " + stateWhatDay.year}` : ""}
-                                </strong> - {[...item.descriptionGroup][horoscopeDaySelected].description}
+                                {stateWhatDay.length === 0
+                                    ?
+                                    <strong>
+                                        {month + " " + day + ", " + year}
+                                    </strong>
+                                    :
+                                    <strong>
+                                        {stateWhatDay.month + " " + stateWhatDay.day + `${parseInt(horoscopeDaySelected) === 4 || parseInt(horoscopeDaySelected) === 5 ? " " : ", "}` + `${parseInt(horoscopeDaySelected) === 4 || 5 ? stateWhatDay.year : " "}`}
+                                        {parseInt(horoscopeDaySelected) === 3 ? `${" - " + stateWhatDay.month + " " + stateWhatDayLast.day + ", " + stateWhatDay.year}` : ""}
+                                    </strong>} - {[...item.descriptionGroup][horoscopeDaySelected].description}
                             </p>
                         </div>
                     </div>
