@@ -173,8 +173,8 @@ const horoscopeSingData = [
         img: '/img/gemini.png',
         classBlur: true,
         date: 'May 21 - Jun 20',
-        fromDay: '5',
-        fromMonth: '21',
+        fromDay: '21',
+        fromMonth: '5',
         untilDay: '6',
         untilMonth: '20',
         descriptionGroup: [
@@ -211,8 +211,8 @@ const horoscopeSingData = [
         img: '/img/cancer.png',
         classBlur: true,
         date: 'Jun 21 - Jul 22',
-        fromDay: '6',
-        fromMonth: '21',
+        fromDay: '21',
+        fromMonth: '6',
         untilDay: '22',
         untilMonth: '7',
         descriptionGroup: [

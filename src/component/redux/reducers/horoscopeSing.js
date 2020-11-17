@@ -31,6 +31,8 @@ export default (state = initialState, action) => {
         case "FIND_ZODIAC_SIGN":
             let month = parseInt(action.payload.month);
             let day = parseInt(action.payload.day);
+            console.log("month", month)
+            console.log("day", day)
             month = isNaN(month) ? 0 : month;
             day = isNaN(day) ? 0 : day;
             return {
@@ -40,6 +42,7 @@ export default (state = initialState, action) => {
                 }),
                 selectToDayMonth: horoscopeSingData.filter(item => {
                     let cmpMonth = month === 1 && parseInt(item.untilMonth) === 13 ? 13 : month;
+                    console.log("horoscopeSingData", item);
                     return (
                         ((cmpMonth === parseInt(item.untilMonth) && day <= parseInt(item.untilDay)) || cmpMonth < parseInt(item.untilMonth)) &&
                         ((cmpMonth === parseInt(item.fromMonth) && day >= parseInt(item.fromDay)) || cmpMonth > parseInt(item.fromMonth))
