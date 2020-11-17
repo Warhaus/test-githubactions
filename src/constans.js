@@ -175,8 +175,8 @@ const horoscopeSingData = [
         date: 'May 21 - Jun 20',
         fromDay: '21',
         fromMonth: '5',
-        untilDay: '6',
-        untilMonth: '20',
+        untilDay: '20',
+        untilMonth: '6',
         descriptionGroup: [
             {
                 id: 0,
