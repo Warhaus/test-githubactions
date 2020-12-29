@@ -35,8 +35,7 @@ jobs:
       
     - name: Build
       run: |-
-        docker build \
-          --tag "$REPO_NAME/$IMAGE:$GITHUB_SHA"
+        docker build --tag "$REPO_NAME/$IMAGE:$GITHUB_SHA" .
 
     - name: Login
       run: |-
