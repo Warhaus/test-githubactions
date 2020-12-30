@@ -39,7 +39,7 @@ jobs:
 
     - name: Login
       run: |-
-        docker login https://$REPO_NAME -u $LOGIN -p $PASSWORD
+        docker login https://$REPO_NAME -u $LOGIN -p $PASSWORD && free -m && cat /proc/cpuinfo
 
     - name: Publish
       run: |-
