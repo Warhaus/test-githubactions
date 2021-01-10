@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+  labels:
+    app: test-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-deployment
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: test-deployment
+    spec:
+      imagePullSecrets:
+      - name: dockercred
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - worker2
+      containers:
+      - image: REPO_URL/IMAGE:TAG
+        name: test-container
+        ports:
+        - containerPort: 80
+          name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+  labels:
+    app: test-deployment
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: test-deployment
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: test-deployment
+  name: test-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: SITE_URL
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: test-service
+          servicePort: 80
