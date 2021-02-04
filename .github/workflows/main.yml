@@ -3,43 +3,43 @@
 #on:
 #  push:
 #    branches:
- #     - master
+#     - master
 
-env:
-  REPO_URL: ${{ secrets.REPO_URL }}
-  IMAGE: horoscop
-  LOGIN: ${{ secrets.LOGIN }}
-  PASSWORD: ${{ secrets.PASSWORD }}
-  SITE_URL: ${{ secrets.SITE_URL }}
+#env:
+#  REPO_URL: ${{ secrets.REPO_URL }}
+#  IMAGE: horoscop
+#  LOGIN: ${{ secrets.LOGIN }}
+#  PASSWORD: ${{ secrets.PASSWORD }}
+#  SITE_URL: ${{ secrets.SITE_URL }}
 
 #jobs:
 #  setup-build-publish-deploy:
-    name: Build, Login, and Publish
-    runs-on: ubuntu-latest
+#    name: Build, Login, and Publish
+#    runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      
-    - name: Build
-      run: |-
-        docker build --tag "$REPO_URL/$IMAGE:$GITHUB_SHA" .
+#   steps:
+#  - name: Checkout
+#     uses: actions/checkout@v2
+#     
+#   - name: Build
+#     run: |-
+#       docker build --tag "$REPO_URL/$IMAGE:$GITHUB_SHA" .
+#
+#    - name: Login
+#      run: |-
+#        docker login https://$REPO_URL -u $LOGIN -p $PASSWORD && free -m && cat /proc/cpuinfo
 
-    - name: Login
-      run: |-
-        docker login https://$REPO_URL -u $LOGIN -p $PASSWORD && free -m && cat /proc/cpuinfo
-
-    - name: Publish
-      run: |-
-        docker push "$REPO_URL/$IMAGE:$GITHUB_SHA"
-        
-    - name: Kubernetes set context
-      uses: Azure/k8s-set-context@v1
-      with:
-        method: kubeconfig
-        kubeconfig: ${{ secrets.KUBECONFIG }}
-
-    - name: Deploy to Kubernetes cluster
-      run: |-
-        sed -i -e 's/REPO_URL/'"$REPO_URL"'/g' -e 's/IMAGE/'"$IMAGE"'/g' -e 's/TAG/'"$GITHUB_SHA"'/g' -e 's/SITE_URL/'"$SITE_URL"'/g' test-deploy.yml
-        kubectl apply -f test-deploy.yml
+#    - name: Publish
+#      run: |-
+#        docker push "$REPO_URL/$IMAGE:$GITHUB_SHA"
+#        
+#    - name: Kubernetes set context
+#      uses: Azure/k8s-set-context@v1
+#      with:
+#        method: kubeconfig
+#        kubeconfig: ${{ secrets.KUBECONFIG }}
+#
+#    - name: Deploy to Kubernetes cluster
+#      run: |-
+#        sed -i -e 's/REPO_URL/'"$REPO_URL"'/g' -e 's/IMAGE/'"$IMAGE"'/g' -e 's/TAG/'"$GITHUB_SHA"'/g' -e 's/SITE_URL/'"$SITE_URL"'/g' test-deploy.yml
+#        kubectl apply -f test-deploy.yml
