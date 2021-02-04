@@ -21,10 +21,12 @@ jobs:
     - name: Extract branch name
       shell: bash
       run: |
-        echo "::set-env name=HW_ENV::${GITHUB_REF##*/}"
-        echo "${{ env.HW_ENV }}"
-        echo "::set-env name=HW_PROJECT_NAME::horoscope"
-        echo "${{ env.HW_PROJECT_NAME }}"
+        #echo "::set-env name=HW_ENV::${GITHUB_REF##*/}"
+        #echo "${{ env.HW_ENV }}"
+        #echo "::set-env name=HW_PROJECT_NAME::horoscope"
+        #echo "${{ env.HW_PROJECT_NAME }}"
+        echo "HW_PROJECT_NAME=horoscope" >> $GITHUB_ENV
+        echo "HW_ENV=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
     # Собираем контейнер
     - name: Build and push image
