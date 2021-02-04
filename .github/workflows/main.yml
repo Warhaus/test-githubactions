@@ -1,9 +1,9 @@
-name: Build, Login and Push Docker Image
+#name: Build, Login and Push Docker Image
 
-on:
-  push:
-    branches:
-      - master
+#on:
+#  push:
+#    branches:
+ #     - master
 
 env:
   REPO_URL: ${{ secrets.REPO_URL }}
@@ -12,8 +12,8 @@ env:
   PASSWORD: ${{ secrets.PASSWORD }}
   SITE_URL: ${{ secrets.SITE_URL }}
 
-jobs:
-  setup-build-publish-deploy:
+#jobs:
+#  setup-build-publish-deploy:
     name: Build, Login, and Publish
     runs-on: ubuntu-latest
 
