@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master, dev ]
+
+#env:
+#   HW_PROJECT_NAME: horoscope
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "deploy"
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Спуливаем содержимое
+    - uses: actions/checkout@v2
+
+    # Устанавливаем
+    - name: Extract branch name
+      shell: bash
+      run: |
+        echo "::set-env name=HW_ENV::${GITHUB_REF##*/}"
+        echo "${{ env.HW_ENV }}"
+        echo "::set-env name=HW_PROJECT_NAME::horoscope"
+        echo "${{ env.HW_PROJECT_NAME }}"
+
+    # Собираем контейнер
+    - name: Build and push image
+      uses: docker/build-push-action@v1.1.0
+      with:
+        repository: ${{ env.HW_PROJECT_NAME }}_${{ env.HW_ENV }}
+        dockerfile: ./Dockerfile
+        registry: ${{ secrets.DOCKER_REGISTRY }}
+        username: ${{ secrets.DOCKER_LOGIN }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        tags: new
+        #build_args: BRAHCH_NAME=${{ env.BRANCH_NAME }}
+
+    # Деплой
+    - name: Deploy prod
+      if: env.HW_ENV == 'master'
+      uses: JimCronqvist/action-ssh@master
+      with:
+          hosts: 'root@${{ secrets.SERVER_HOST }}'
+          privateKey: ${{ secrets.PRIVATE_KEY }}
+          command: ./deploy.sh ${{ env.HW_ENV }} ${{ secrets.DOCKER_REGISTRY }} ${{ secrets.DOCKER_LOGIN }} ${{ secrets.DOCKER_PASSWORD }} ${{ secrets.HW_TG_BOT_TOKEN }} ${{ secrets.HW_TG_CHAT_ID }} ${{ env.HW_PROJECT_NAME }}
+    - name: Deploy dev
+      if: env.BRANCH_NAME == 'dev'
+      uses: JimCronqvist/action-ssh@master
+      with:
+          hosts: 'root@${{ secrets.SERVER_HOST }}'
+          privateKey: ${{ secrets.PRIVATE_KEY }}
+          command: ./deploy.sh ${{ env.HW_ENV }} ${{ secrets.DOCKER_REGISTRY }} ${{ secrets.DOCKER_LOGIN }} ${{ secrets.DOCKER_PASSWORD }} ${{ secrets.HW_TG_BOT_TOKEN }} ${{ secrets.HW_TG_CHAT_ID }} ${{ env.HW_PROJECT_NAME }}
